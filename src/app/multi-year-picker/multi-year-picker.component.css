@@ -1,0 +1,48 @@
+.panel { 
+  z-index: 99;
+  position: absolute;
+  background-color: white;
+  border: 1px solid lightblue;
+  border-radius: 8px;
+  padding: 5px 15px;
+
+}
+
+.selected {
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
+.date-picker {
+  display: inline-table;
+  position: relative;
+
+}
+
+.cell {
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px;
+}
+
+.today {
+  border-radius: 5px;
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 13px;
+  margin-left: -9px;
+  
+}
+.first-row span {
+  color: aliceblue;
+  background-color: lightslategrey;
+  border-radius: 100%;
+  padding:4px 6px;
+}
+
+.button {
+  cursor: pointer;
+}

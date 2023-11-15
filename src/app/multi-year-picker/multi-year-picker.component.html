@@ -1,0 +1,10 @@
+<span class='date-picker'>
+<input class='form-control' (click)='toggleWindow()' [value]='getValue()' readonly >
+<div *ngIf='showWindow' class='panel'>
+  <p class='first-row'>{{slicedYears[0]}} / {{slicedYears[range.offset-1]}} <span class='button fa fa-arrow-left' (click)='previous()'></span> <span class='button fa fa-arrow-right' (click)='next()'></span></p>
+  <ng-container *ngFor='let year of slicedYears; let i = index' >
+    <span (click)='select(year)' class='cell' [class.selected]='selectedYears.includes(year)'  [class.today]='date.getFullYear() === year' >{{year}}</span>
+    <br *ngIf='(i+1)%4 == 0'>
+  </ng-container>
+</div>
+</span>
